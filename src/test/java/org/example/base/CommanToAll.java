@@ -25,4 +25,15 @@ public class CommanToAll {
         requestSpecification.baseUri(APIConstraints.BASE_URL);
         requestSpecification.contentType(ContentType.JSON);
     }
+
+    public  String getToken()
+    {
+        requestSpecification.basePath(APIConstraints.AUTH_URL);
+        requestSpecification.body(payloadmanager.tokenCreate());
+
+        response = requestSpecification.when().log().all().post();
+
+        String token = payloadmanager.tokenResponse(response.asString());
+        return token;
+    }
 }
