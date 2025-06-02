@@ -1,4 +1,4 @@
-package org.example.GSON;
+package org.example.pojo;
 
 
 import com.google.gson.annotations.Expose;
