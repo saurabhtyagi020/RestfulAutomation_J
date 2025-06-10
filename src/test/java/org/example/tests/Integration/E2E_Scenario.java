@@ -45,7 +45,7 @@ public class E2E_Scenario extends CommanToAll {
         System.out.println(jsonbookingrs.getDepositpaid());
     }
 
-    @Description("Update the booking")
+    @Description("Update the booking ")
     @Test(priority = 3)
     public void test_update_booking(ITestContext iTestContext) {
         Integer bookingID = (Integer) iTestContext.getAttribute("bookingid");
